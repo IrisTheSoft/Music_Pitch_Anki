@@ -19,7 +19,7 @@ with open("media.svg.jinja") as media_template_file:
     media_template = JJ.Template(media_template_file.read())
 
 
-def generate_media(file_name, clef, signature_count):
+def generate_media(file_name, clef, signature_count, note):
     if signature_count > 0:
         signature_kind = "sharp"
         signature = clef.sharps[:signature_count]
@@ -34,4 +34,7 @@ def generate_media(file_name, clef, signature_count):
             "clef": clef.name,
             "signature_kind": signature_kind,
             "signature": signature,
-            "enumerate": enumerate}))
+            "note": note,
+            "enumerate": enumerate,
+            "list": list,
+            "sign": lambda x: 1 if x >= 0 else -1}))
