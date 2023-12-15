@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+    font-size: 6vh;
+}
+
+svg {
+    height: 75vh;
+}
+
+#staff {
+    stroke: gray;
+}
+
+.stroked {
+    stroke: black;
+}
